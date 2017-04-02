@@ -8,9 +8,9 @@
 
 Problem Description:
 
-What is JavaFX?  JavaFX replaces Swing as the standard UI component for Java.  JavaFX uses a common programming paradigm – designer files that are edited by an external tool, splitting the presentation from the other programming logic.
+What is JavaFX?  JavaFX replaces Swing as the standard UI component for Java.  JavaFX uses a common programming paradigm � designer files that are edited by an external tool, splitting the presentation from the other programming logic.
 
-Here’s the link to the tutorial:
+Here's the link to the tutorial:
 
 http://code.makery.ch/library/javafx-8-tutorial/
 
@@ -22,7 +22,7 @@ This tutorial will use:
 *	Introduction to CSS
 *	Introduction to events (press button, UI responds)
 
-It’s a long tutorial, a lot of steps to follow.  Follow each step CAREFULLY.  DO NOT SKIP steps (or later parts won’t work correctly).
+It's a long tutorial, a lot of steps to follow.  Follow each step CAREFULLY.  DO NOT SKIP steps (or later parts won't work correctly).
 
 *	Complete the JavaFX Tutorial (steps 1-6, skip step 7)
 *	Deliverable - JavaFX Project with FXMLs, CSSs
