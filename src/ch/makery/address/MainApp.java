@@ -11,8 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ch.makery.address.model.*;
-import ch.makery.address.view.PersonOverviewController;
-import ch.makery.address.view.PersonEditDialogController;
+import ch.makery.address.view.*;
 import javafx.stage.Modality;
 import javafx.scene.image.Image;
 import javafx.scene.*;
@@ -77,21 +76,34 @@ public class MainApp extends Application {
     
     
     /**
-     * Initializes the root layout.
+     * Initializes the root layout and tries to load the last opened
+     * person file.
      */
     public void initRootLayout() {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
+            loader.setLocation(MainApp.class
+                    .getResource("view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
+
+            // Give the controller access to the main app.
+            RootLayoutController controller = loader.getController();
+            controller.setMainApp(this);
+
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        // Try to load last opened person file.
+        File file = getPersonFilePath();
+        if (file != null) {
+            loadPersonDataFromFile(file);
         }
     }
 
