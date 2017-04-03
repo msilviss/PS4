@@ -14,6 +14,7 @@ import ch.makery.address.model.Person;
 import ch.makery.address.view.PersonOverviewController;
 import ch.makery.address.view.PersonEditDialogController;
 import javafx.stage.Modality;
+import javafx.scene.image.Image;
 
 public class MainApp extends Application {
 
@@ -55,7 +56,10 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
-
+        
+        // Set the application icon.
+        this.primaryStage.getIcons().add(new Image("file:resources/images/ic_contacts_black_24px.svg"));
+        
         initRootLayout();
 
         showPersonOverview();
